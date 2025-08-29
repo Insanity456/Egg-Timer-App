@@ -1,0 +1,154 @@
+/* General styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  background: #fef9f3;
+  color: #333;
+  transition: background 0.6s ease, color 0.6s ease;
+}
+
+.container {
+  margin-top: 50px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+h1:hover {
+  transform: scale(1.1);
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.buttons {
+  margin: 20px 0;
+}
+
+button {
+  background: #ffcc70;
+  border: none;
+  padding: 15px 25px;
+  margin: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+button:hover:not(:disabled) {
+  background: #ffb347;
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+button:disabled {
+  background: #ddd;
+  cursor: not-allowed;
+}
+
+#modeToggle {
+  background: linear-gradient(135deg, #ffcc70, #ffb347);
+  color: #333;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  transition: all 0.4s ease;
+}
+#modeToggle:hover {
+  transform: scale(1.1) rotate(1deg);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Timer Box */
+#timer-box {
+  margin-top: 30px;
+  padding: 20px;
+  border: 2px solid #ffcc70;
+  display: inline-block;
+  border-radius: 10px;
+  background: #fff5e6;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: background 0.6s ease, border 0.6s ease, box-shadow 0.6s ease;
+}
+
+#status {
+  transition: opacity 0.5s;
+}
+
+#time {
+  font-size: 2rem;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Progress Bar */
+.progress-container {
+  width: 300px;
+  height: 20px;
+  background: #eee;
+  border-radius: 10px;
+  margin: 20px auto;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ffcc70, #ffb347);
+  box-shadow: 0 0 10px rgba(255,179,71,0.7);
+  transition: width 1s linear, box-shadow 0.3s ease-in-out;
+}
+
+/* Cooking tips */
+#tips {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  background: #fff9f0;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ffcc70;
+  transition: background 0.6s, color 0.6s;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background: #121212;
+  color: #f1f1f1;
+}
+.dark-mode #timer-box {
+  background: #1e1e1e;
+  border: 2px solid #444;
+  box-shadow: 0 4px 20px rgba(255,255,255,0.05);
+}
+.dark-mode #tips {
+  background: #222;
+  border-color: #555;
+  color: #ddd;
+}
+.dark-mode button {
+  background: #2a2a2a;
+  color: #eee;
+}
+.dark-mode button:hover:not(:disabled) {
+  background: #444;
+  transform: scale(1.07) rotate(-1deg);
+  box-shadow: 0 4px 15px rgba(255,255,255,0.2);
+}
+.dark-mode #modeToggle {
+  background: linear-gradient(135deg, #444, #222);
+  color: #f1f1f1;
+}
+.dark-mode #modeToggle:hover {
+  box-shadow: 0 4px 15px rgba(255,255,255,0.15);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
